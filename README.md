@@ -12,3 +12,7 @@ Test Cases :
         3.Validate Savlon
         4.Validate Odomos
         5.Validate Savlon quantity
+
+BDD Framework (GHERKINS) lifecycle is followed in:
+        
+        file-->gherkins.robot inside folder-->gherkins
