@@ -94,3 +94,5 @@ validate Savlon
     
 Validate savlon quantity
     Element Should Contain Text    xpath=(//*[@resource-id='com.aranoah.healthkart.plus:id/stepper_value'])[2]    2    
+    
+

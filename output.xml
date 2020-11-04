@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.9.0 on win32)" generated="20201104 13:45:48.841" rpa="false">
+<robot generator="Robot 3.2.2 (Python 3.9.0 on win32)" generated="20201104 16:05:57.711" rpa="false">
 <suite id="s1" name="1MGAutomation" source="D:\SeleniumPojects\MiniProject\1MGAutomation">
-<suite id="s1-s1" name="1MGSuite" source="D:\SeleniumPojects\MiniProject\1MGAutomation\1MGSuite">
-<suite id="s1-s1-s1" name="1MGTestSuite" source="D:\SeleniumPojects\MiniProject\1MGAutomation\1MGSuite\1MGTestSuite.robot">
-<test id="s1-s1-s1-t1" name="validating cart">
-<kw name="Set Appium Timeout" library="AppiumLibrary">
-<doc>Sets the timeout in seconds used by various keywords.</doc>
-<arguments>
-<arg>30s</arg>
-</arguments>
-<status status="PASS" starttime="20201104 13:45:49.099" endtime="20201104 13:45:49.099"></status>
-</kw>
-<kw name="Open 1MG Main Page" library="1MGResources">
+<suite id="s1-s1" name="Gherkins" source="D:\SeleniumPojects\MiniProject\1MGAutomation\gherkins">
+<suite id="s1-s1-s1" name="Gherkins" source="D:\SeleniumPojects\MiniProject\1MGAutomation\gherkins\gherkins.robot">
+<test id="s1-s1-s1-t1" name="Validation using gherkins">
+<kw name="Given I have to open the application and go to main page">
 <kw name="Run Application" library="1MGResources">
 <kw name="Open Application" library="AppiumLibrary">
 <doc>Opens a new application to given Appium server.
@@ -26,83 +19,9 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>deviceName=emulator</arg>
 <arg>app=${EXECDIR}${/}app${/}1MGhealthcare.apk</arg>
 </arguments>
-<status status="PASS" starttime="20201104 13:45:49.100" endtime="20201104 13:46:01.653"></status>
+<status status="PASS" starttime="20201104 16:05:57.942" endtime="20201104 16:06:08.744"></status>
 </kw>
-<status status="PASS" starttime="20201104 13:45:49.100" endtime="20201104 13:46:01.653"></status>
-</kw>
-<kw name="Get Matching Xpath Count" library="AppiumLibrary">
-<doc>Returns number of elements matching ``xpath``</doc>
-<arguments>
-<arg>//*[@resource-id='com.aranoah.healthkart.plus:id/close']</arg>
-</arguments>
-<assign>
-<var>${count}</var>
-</assign>
-<msg timestamp="20201104 13:46:01.798" level="INFO">${count} = 0</msg>
-<status status="PASS" starttime="20201104 13:46:01.654" endtime="20201104 13:46:01.798"></status>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>${count} != 0</arg>
-<arg>Click Element</arg>
-<arg>//*[@resource-id='com.aranoah.healthkart.plus:id/close']</arg>
-</arguments>
-<status status="PASS" starttime="20201104 13:46:01.798" endtime="20201104 13:46:01.799"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>//*[@text='SIGN UP']</arg>
-<arg>timeout=10s</arg>
-</arguments>
-<status status="PASS" starttime="20201104 13:46:01.799" endtime="20201104 13:46:07.244"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>//*[@text='SIGN UP']</arg>
-</arguments>
-<msg timestamp="20201104 13:46:07.245" level="INFO">Clicking element '//*[@text='SIGN UP']'.</msg>
-<status status="PASS" starttime="20201104 13:46:07.244" endtime="20201104 13:46:07.353"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>//*[@text='Later']</arg>
-</arguments>
-<status status="PASS" starttime="20201104 13:46:07.353" endtime="20201104 13:46:08.259"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>//*[@text='Later']</arg>
-</arguments>
-<msg timestamp="20201104 13:46:08.260" level="INFO">Clicking element '//*[@text='Later']'.</msg>
-<status status="PASS" starttime="20201104 13:46:08.260" endtime="20201104 13:46:08.370"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>//*[@text='While using the app']</arg>
-</arguments>
-<status status="PASS" starttime="20201104 13:46:08.370" endtime="20201104 13:46:09.154"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>//*[@text='While using the app']</arg>
-</arguments>
-<msg timestamp="20201104 13:46:09.155" level="INFO">Clicking element '//*[@text='While using the app']'.</msg>
-<status status="PASS" starttime="20201104 13:46:09.154" endtime="20201104 13:46:09.258"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>//*[@resource-id='com.aranoah.healthkart.plus:id/close']</arg>
-<arg>timeout=10s</arg>
-</arguments>
-<status status="PASS" starttime="20201104 13:46:09.259" endtime="20201104 13:46:15.420"></status>
+<status status="PASS" starttime="20201104 16:05:57.942" endtime="20201104 16:06:08.744"></status>
 </kw>
 <kw name="Get Matching Xpath Count" library="AppiumLibrary">
 <doc>Returns number of elements matching ``xpath``</doc>
@@ -112,8 +31,82 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <assign>
 <var>${count}</var>
 </assign>
-<msg timestamp="20201104 13:46:15.442" level="INFO">${count} = 1</msg>
-<status status="PASS" starttime="20201104 13:46:15.420" endtime="20201104 13:46:15.442"></status>
+<msg timestamp="20201104 16:06:09.292" level="INFO">${count} = 0</msg>
+<status status="PASS" starttime="20201104 16:06:08.744" endtime="20201104 16:06:09.292"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${count} != 0</arg>
+<arg>Click Element</arg>
+<arg>//*[@resource-id='com.aranoah.healthkart.plus:id/close']</arg>
+</arguments>
+<status status="PASS" starttime="20201104 16:06:09.292" endtime="20201104 16:06:09.293"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>//*[@text='SIGN UP']</arg>
+<arg>timeout=10s</arg>
+</arguments>
+<status status="PASS" starttime="20201104 16:06:09.293" endtime="20201104 16:06:14.331"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@text='SIGN UP']</arg>
+</arguments>
+<msg timestamp="20201104 16:06:14.332" level="INFO">Clicking element '//*[@text='SIGN UP']'.</msg>
+<status status="PASS" starttime="20201104 16:06:14.331" endtime="20201104 16:06:14.438"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>//*[@text='Later']</arg>
+</arguments>
+<status status="PASS" starttime="20201104 16:06:14.438" endtime="20201104 16:06:15.444"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@text='Later']</arg>
+</arguments>
+<msg timestamp="20201104 16:06:15.445" level="INFO">Clicking element '//*[@text='Later']'.</msg>
+<status status="PASS" starttime="20201104 16:06:15.444" endtime="20201104 16:06:15.546"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>//*[@text='While using the app']</arg>
+</arguments>
+<status status="PASS" starttime="20201104 16:06:15.547" endtime="20201104 16:06:16.377"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@text='While using the app']</arg>
+</arguments>
+<msg timestamp="20201104 16:06:16.379" level="INFO">Clicking element '//*[@text='While using the app']'.</msg>
+<status status="PASS" starttime="20201104 16:06:16.378" endtime="20201104 16:06:16.465"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>//*[@resource-id='com.aranoah.healthkart.plus:id/close']</arg>
+<arg>timeout=10s</arg>
+</arguments>
+<status status="PASS" starttime="20201104 16:06:16.466" endtime="20201104 16:06:21.798"></status>
+</kw>
+<kw name="Get Matching Xpath Count" library="AppiumLibrary">
+<doc>Returns number of elements matching ``xpath``</doc>
+<arguments>
+<arg>//*[@resource-id='com.aranoah.healthkart.plus:id/close']</arg>
+</arguments>
+<assign>
+<var>${count}</var>
+</assign>
+<msg timestamp="20201104 16:06:21.825" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20201104 16:06:21.798" endtime="20201104 16:06:21.825"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -127,607 +120,222 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>//*[@resource-id='com.aranoah.healthkart.plus:id/close']</arg>
 </arguments>
-<msg timestamp="20201104 13:46:15.443" level="INFO">Clicking element '//*[@resource-id='com.aranoah.healthkart.plus:id/close']'.</msg>
-<status status="PASS" starttime="20201104 13:46:15.442" endtime="20201104 13:46:15.573"></status>
+<msg timestamp="20201104 16:06:21.826" level="INFO">Clicking element '//*[@resource-id='com.aranoah.healthkart.plus:id/close']'.</msg>
+<status status="PASS" starttime="20201104 16:06:21.826" endtime="20201104 16:06:21.903"></status>
 </kw>
-<status status="PASS" starttime="20201104 13:46:15.442" endtime="20201104 13:46:15.573"></status>
+<status status="PASS" starttime="20201104 16:06:21.825" endtime="20201104 16:06:21.903"></status>
 </kw>
-<status status="PASS" starttime="20201104 13:45:49.099" endtime="20201104 13:46:15.573"></status>
+<status status="PASS" starttime="20201104 16:05:57.942" endtime="20201104 16:06:21.903"></status>
 </kw>
-<kw name="Add Savlon to cart">
-<kw name="Set Appium Timeout" library="AppiumLibrary">
-<doc>Sets the timeout in seconds used by various keywords.</doc>
-<arguments>
-<arg>30s</arg>
-</arguments>
-<status status="PASS" starttime="20201104 13:46:15.574" endtime="20201104 13:46:15.574"></status>
-</kw>
-<kw name="Goto corona Prevention" library="1MGResources">
+<kw name="When I go to corona Prevention">
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>//*[@resource-id='com.aranoah.healthkart.plus:id/service_view']</arg>
 </arguments>
-<msg timestamp="20201104 13:46:15.575" level="INFO">Clicking element '//*[@resource-id='com.aranoah.healthkart.plus:id/service_view']'.</msg>
-<status status="PASS" starttime="20201104 13:46:15.575" endtime="20201104 13:46:16.536"></status>
+<msg timestamp="20201104 16:06:21.905" level="INFO">Clicking element '//*[@resource-id='com.aranoah.healthkart.plus:id/service_view']'.</msg>
+<status status="PASS" starttime="20201104 16:06:21.904" endtime="20201104 16:06:22.787"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>//*[@text='Coronavirus Prevention']</arg>
 </arguments>
-<status status="PASS" starttime="20201104 13:46:16.537" endtime="20201104 13:46:19.053"></status>
+<status status="PASS" starttime="20201104 16:06:22.787" endtime="20201104 16:06:25.378"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>//*[@text='Coronavirus Prevention']</arg>
 </arguments>
-<msg timestamp="20201104 13:46:19.054" level="INFO">Clicking element '//*[@text='Coronavirus Prevention']'.</msg>
-<status status="PASS" starttime="20201104 13:46:19.053" endtime="20201104 13:46:19.240"></status>
+<msg timestamp="20201104 16:06:25.379" level="INFO">Clicking element '//*[@text='Coronavirus Prevention']'.</msg>
+<status status="PASS" starttime="20201104 16:06:25.378" endtime="20201104 16:06:25.544"></status>
 </kw>
-<status status="PASS" starttime="20201104 13:46:15.574" endtime="20201104 13:46:19.240"></status>
+<status status="PASS" starttime="20201104 16:06:21.904" endtime="20201104 16:06:25.544"></status>
 </kw>
-<kw name="Sort by Price" library="1MGResources">
+<kw name="And I sort Price low to high">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>//*[@text='Sort']</arg>
 </arguments>
-<status status="PASS" starttime="20201104 13:46:19.241" endtime="20201104 13:46:21.812"></status>
+<status status="PASS" starttime="20201104 16:06:25.545" endtime="20201104 16:06:27.822"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>//*[@text='Sort']</arg>
 </arguments>
-<msg timestamp="20201104 13:46:21.813" level="INFO">Clicking element '//*[@text='Sort']'.</msg>
-<status status="PASS" starttime="20201104 13:46:21.812" endtime="20201104 13:46:21.950"></status>
+<msg timestamp="20201104 16:06:27.824" level="INFO">Clicking element '//*[@text='Sort']'.</msg>
+<status status="PASS" starttime="20201104 16:06:27.823" endtime="20201104 16:06:27.951"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>//*[@text='Price: Low to High']</arg>
 </arguments>
-<status status="PASS" starttime="20201104 13:46:21.950" endtime="20201104 13:46:22.863"></status>
+<status status="PASS" starttime="20201104 16:06:27.951" endtime="20201104 16:06:28.906"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>//*[@text='Price: Low to High']</arg>
 </arguments>
-<msg timestamp="20201104 13:46:22.864" level="INFO">Clicking element '//*[@text='Price: Low to High']'.</msg>
-<status status="PASS" starttime="20201104 13:46:22.864" endtime="20201104 13:46:23.868"></status>
+<msg timestamp="20201104 16:06:28.907" level="INFO">Clicking element '//*[@text='Price: Low to High']'.</msg>
+<status status="PASS" starttime="20201104 16:06:28.906" endtime="20201104 16:06:29.966"></status>
 </kw>
-<status status="PASS" starttime="20201104 13:46:19.240" endtime="20201104 13:46:23.869"></status>
+<status status="PASS" starttime="20201104 16:06:25.544" endtime="20201104 16:06:29.966"></status>
 </kw>
-<kw name="Select Savlon" library="1MGResources">
+<kw name="And I add savlon">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>//*[@text='Savlon Antiseptic Liquid']</arg>
 </arguments>
-<status status="PASS" starttime="20201104 13:46:23.870" endtime="20201104 13:46:25.600"></status>
+<status status="PASS" starttime="20201104 16:06:29.967" endtime="20201104 16:06:31.628"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>//*[@text='Savlon Antiseptic Liquid']</arg>
 </arguments>
-<msg timestamp="20201104 13:46:25.601" level="INFO">Clicking element '//*[@text='Savlon Antiseptic Liquid']'.</msg>
-<status status="PASS" starttime="20201104 13:46:25.600" endtime="20201104 13:46:25.911"></status>
+<msg timestamp="20201104 16:06:31.629" level="INFO">Clicking element '//*[@text='Savlon Antiseptic Liquid']'.</msg>
+<status status="PASS" starttime="20201104 16:06:31.628" endtime="20201104 16:06:32.023"></status>
 </kw>
-<status status="PASS" starttime="20201104 13:46:23.869" endtime="20201104 13:46:25.911"></status>
+<status status="PASS" starttime="20201104 16:06:29.967" endtime="20201104 16:06:32.024"></status>
 </kw>
-<kw name="Select 2 Bottles" library="1MGResources">
+<kw name="And I Select 2 Bottles">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>//*[@text='1 Bottle']</arg>
 </arguments>
-<status status="PASS" starttime="20201104 13:46:25.912" endtime="20201104 13:46:29.102"></status>
+<status status="PASS" starttime="20201104 16:06:32.024" endtime="20201104 16:06:35.129"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>//*[@text='1 Bottle']</arg>
 </arguments>
-<msg timestamp="20201104 13:46:29.104" level="INFO">Clicking element '//*[@text='1 Bottle']'.</msg>
-<status status="PASS" starttime="20201104 13:46:29.102" endtime="20201104 13:46:29.230"></status>
+<msg timestamp="20201104 16:06:35.131" level="INFO">Clicking element '//*[@text='1 Bottle']'.</msg>
+<status status="PASS" starttime="20201104 16:06:35.129" endtime="20201104 16:06:35.268"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>//*[@text='2']</arg>
 </arguments>
-<status status="PASS" starttime="20201104 13:46:29.230" endtime="20201104 13:46:30.215"></status>
+<status status="PASS" starttime="20201104 16:06:35.268" endtime="20201104 16:06:36.169"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>//*[@text='2']</arg>
 </arguments>
-<msg timestamp="20201104 13:46:30.216" level="INFO">Clicking element '//*[@text='2']'.</msg>
-<status status="PASS" starttime="20201104 13:46:30.215" endtime="20201104 13:46:30.885"></status>
+<msg timestamp="20201104 16:06:36.170" level="INFO">Clicking element '//*[@text='2']'.</msg>
+<status status="PASS" starttime="20201104 16:06:36.170" endtime="20201104 16:06:36.828"></status>
 </kw>
-<status status="PASS" starttime="20201104 13:46:25.912" endtime="20201104 13:46:30.886"></status>
+<status status="PASS" starttime="20201104 16:06:32.024" endtime="20201104 16:06:36.829"></status>
 </kw>
-<kw name="Add to Cart" library="1MGResources">
+<kw name="And I Add it to Cart">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>//*[@text='Add To Cart']</arg>
 </arguments>
-<status status="PASS" starttime="20201104 13:46:30.887" endtime="20201104 13:46:30.986"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>//*[@text='Add To Cart']</arg>
-</arguments>
-<msg timestamp="20201104 13:46:30.987" level="INFO">Clicking element '//*[@text='Add To Cart']'.</msg>
-<status status="PASS" starttime="20201104 13:46:30.986" endtime="20201104 13:46:32.048"></status>
-</kw>
-<status status="PASS" starttime="20201104 13:46:30.886" endtime="20201104 13:46:32.048"></status>
-</kw>
-<status status="PASS" starttime="20201104 13:46:15.573" endtime="20201104 13:46:32.048"></status>
-</kw>
-<kw name="Add odomos using search">
-<kw name="Set Appium Timeout" library="AppiumLibrary">
-<doc>Sets the timeout in seconds used by various keywords.</doc>
-<arguments>
-<arg>30s</arg>
-</arguments>
-<status status="PASS" starttime="20201104 13:46:32.049" endtime="20201104 13:46:32.049"></status>
-</kw>
-<kw name="Search Product" library="1MGResources">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>//*[@resource-id='com.aranoah.healthkart.plus:id/search']</arg>
-<arg>timeout=30s</arg>
-</arguments>
-<status status="PASS" starttime="20201104 13:46:32.050" endtime="20201104 13:46:32.762"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>//*[@resource-id='com.aranoah.healthkart.plus:id/search']</arg>
-</arguments>
-<msg timestamp="20201104 13:46:32.763" level="INFO">Clicking element '//*[@resource-id='com.aranoah.healthkart.plus:id/search']'.</msg>
-<status status="PASS" starttime="20201104 13:46:32.762" endtime="20201104 13:46:32.878"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>//*[@text='Search Medicines']</arg>
-</arguments>
-<status status="PASS" starttime="20201104 13:46:32.878" endtime="20201104 13:46:35.263"></status>
-</kw>
-<status status="PASS" starttime="20201104 13:46:32.049" endtime="20201104 13:46:35.263"></status>
-</kw>
-<kw name="Enter Odomos" library="1MGResources">
-<kw name="Input Text" library="AppiumLibrary">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>//*[@text='Search Medicines']</arg>
-<arg>odomos</arg>
-</arguments>
-<msg timestamp="20201104 13:46:35.265" level="INFO">Typing text 'odomos' into text field '//*[@text='Search Medicines']'</msg>
-<status status="PASS" starttime="20201104 13:46:35.264" endtime="20201104 13:46:35.354"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>//*[@text='Odomos']</arg>
-</arguments>
-<status status="PASS" starttime="20201104 13:46:35.354" endtime="20201104 13:46:37.214"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>//*[@text='Odomos']</arg>
-</arguments>
-<msg timestamp="20201104 13:46:37.215" level="INFO">Clicking element '//*[@text='Odomos']'.</msg>
-<status status="PASS" starttime="20201104 13:46:37.215" endtime="20201104 13:46:37.320"></status>
-</kw>
-<status status="PASS" starttime="20201104 13:46:35.264" endtime="20201104 13:46:37.321"></status>
-</kw>
-<kw name="Scroll and Select odomos Gel" library="1MGResources">
-<kw name="${i} IN RANGE [ 0 | 999 ]" type="for">
-<kw name="${i} = 0" type="foritem">
-<kw name="Run Keyword And Ignore Error" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<arguments>
-<arg>Get Webelements</arg>
-<arg>xpath=//*[contains(@text,'Gel')]</arg>
-</arguments>
-<assign>
-<var>${list}</var>
-</assign>
-<kw name="Get Webelements" library="AppiumLibrary">
-<doc>Returns list of [http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.remote.webelement|WebElement] objects matching ``locator``.</doc>
-<arguments>
-<arg>xpath=//*[contains(@text,'Gel')]</arg>
-</arguments>
-<kw name="Capture Page Screenshot" library="AppiumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20201104 13:46:38.441" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20201104 13:46:37.654" endtime="20201104 13:46:38.441"></status>
-</kw>
-<msg timestamp="20201104 13:46:38.455" level="FAIL">ValueError: Element locator 'xpath=//*[contains(@text,'Gel')]' did not match any elements.</msg>
-<status status="FAIL" starttime="20201104 13:46:37.323" endtime="20201104 13:46:38.455"></status>
-</kw>
-<msg timestamp="20201104 13:46:38.456" level="INFO">${list} = ('FAIL', "ValueError: Element locator 'xpath=//*[contains(@text,'Gel')]' did not match any elements.")</msg>
-<status status="PASS" starttime="20201104 13:46:37.322" endtime="20201104 13:46:38.456"></status>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
-<arguments>
-<arg>'${list}[0]'=='PASS'</arg>
-</arguments>
-<status status="PASS" starttime="20201104 13:46:38.456" endtime="20201104 13:46:38.457"></status>
-</kw>
-<kw name="Swipe By Percent" library="AppiumLibrary">
-<doc>Swipe from one percent of the screen to another percent, for an optional duration.
-Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
-<arguments>
-<arg>50</arg>
-<arg>60</arg>
-<arg>50</arg>
-<arg>25</arg>
-<arg>3000</arg>
-</arguments>
-<status status="PASS" starttime="20201104 13:46:38.457" endtime="20201104 13:46:41.497"></status>
-</kw>
-<status status="PASS" starttime="20201104 13:46:37.322" endtime="20201104 13:46:41.497"></status>
-</kw>
-<kw name="${i} = 1" type="foritem">
-<kw name="Run Keyword And Ignore Error" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<arguments>
-<arg>Get Webelements</arg>
-<arg>xpath=//*[contains(@text,'Gel')]</arg>
-</arguments>
-<assign>
-<var>${list}</var>
-</assign>
-<kw name="Get Webelements" library="AppiumLibrary">
-<doc>Returns list of [http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.remote.webelement|WebElement] objects matching ``locator``.</doc>
-<arguments>
-<arg>xpath=//*[contains(@text,'Gel')]</arg>
-</arguments>
-<kw name="Capture Page Screenshot" library="AppiumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20201104 13:46:41.948" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-2.png"&gt;&lt;img src="appium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20201104 13:46:41.599" endtime="20201104 13:46:41.948"></status>
-</kw>
-<msg timestamp="20201104 13:46:41.949" level="FAIL">ValueError: Element locator 'xpath=//*[contains(@text,'Gel')]' did not match any elements.</msg>
-<status status="FAIL" starttime="20201104 13:46:41.510" endtime="20201104 13:46:41.949"></status>
-</kw>
-<msg timestamp="20201104 13:46:41.949" level="INFO">${list} = ('FAIL', "ValueError: Element locator 'xpath=//*[contains(@text,'Gel')]' did not match any elements.")</msg>
-<status status="PASS" starttime="20201104 13:46:41.510" endtime="20201104 13:46:41.949"></status>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
-<arguments>
-<arg>'${list}[0]'=='PASS'</arg>
-</arguments>
-<status status="PASS" starttime="20201104 13:46:41.949" endtime="20201104 13:46:41.950"></status>
-</kw>
-<kw name="Swipe By Percent" library="AppiumLibrary">
-<doc>Swipe from one percent of the screen to another percent, for an optional duration.
-Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
-<arguments>
-<arg>50</arg>
-<arg>60</arg>
-<arg>50</arg>
-<arg>25</arg>
-<arg>3000</arg>
-</arguments>
-<status status="PASS" starttime="20201104 13:46:41.950" endtime="20201104 13:46:44.509"></status>
-</kw>
-<status status="PASS" starttime="20201104 13:46:41.497" endtime="20201104 13:46:44.510"></status>
-</kw>
-<kw name="${i} = 2" type="foritem">
-<kw name="Run Keyword And Ignore Error" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<arguments>
-<arg>Get Webelements</arg>
-<arg>xpath=//*[contains(@text,'Gel')]</arg>
-</arguments>
-<assign>
-<var>${list}</var>
-</assign>
-<kw name="Get Webelements" library="AppiumLibrary">
-<doc>Returns list of [http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.remote.webelement|WebElement] objects matching ``locator``.</doc>
-<arguments>
-<arg>xpath=//*[contains(@text,'Gel')]</arg>
-</arguments>
-<kw name="Capture Page Screenshot" library="AppiumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20201104 13:46:44.910" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-3.png"&gt;&lt;img src="appium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20201104 13:46:44.588" endtime="20201104 13:46:44.911"></status>
-</kw>
-<msg timestamp="20201104 13:46:44.911" level="FAIL">ValueError: Element locator 'xpath=//*[contains(@text,'Gel')]' did not match any elements.</msg>
-<status status="FAIL" starttime="20201104 13:46:44.511" endtime="20201104 13:46:44.911"></status>
-</kw>
-<msg timestamp="20201104 13:46:44.912" level="INFO">${list} = ('FAIL', "ValueError: Element locator 'xpath=//*[contains(@text,'Gel')]' did not match any elements.")</msg>
-<status status="PASS" starttime="20201104 13:46:44.511" endtime="20201104 13:46:44.912"></status>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
-<arguments>
-<arg>'${list}[0]'=='PASS'</arg>
-</arguments>
-<status status="PASS" starttime="20201104 13:46:44.912" endtime="20201104 13:46:44.912"></status>
-</kw>
-<kw name="Swipe By Percent" library="AppiumLibrary">
-<doc>Swipe from one percent of the screen to another percent, for an optional duration.
-Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
-<arguments>
-<arg>50</arg>
-<arg>60</arg>
-<arg>50</arg>
-<arg>25</arg>
-<arg>3000</arg>
-</arguments>
-<status status="PASS" starttime="20201104 13:46:44.912" endtime="20201104 13:46:47.199"></status>
-</kw>
-<status status="PASS" starttime="20201104 13:46:44.510" endtime="20201104 13:46:47.200"></status>
-</kw>
-<kw name="${i} = 3" type="foritem">
-<kw name="Run Keyword And Ignore Error" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<arguments>
-<arg>Get Webelements</arg>
-<arg>xpath=//*[contains(@text,'Gel')]</arg>
-</arguments>
-<assign>
-<var>${list}</var>
-</assign>
-<kw name="Get Webelements" library="AppiumLibrary">
-<doc>Returns list of [http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.remote.webelement|WebElement] objects matching ``locator``.</doc>
-<arguments>
-<arg>xpath=//*[contains(@text,'Gel')]</arg>
-</arguments>
-<kw name="Capture Page Screenshot" library="AppiumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20201104 13:46:47.609" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-4.png"&gt;&lt;img src="appium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20201104 13:46:47.283" endtime="20201104 13:46:47.609"></status>
-</kw>
-<msg timestamp="20201104 13:46:47.610" level="FAIL">ValueError: Element locator 'xpath=//*[contains(@text,'Gel')]' did not match any elements.</msg>
-<status status="FAIL" starttime="20201104 13:46:47.201" endtime="20201104 13:46:47.610"></status>
-</kw>
-<msg timestamp="20201104 13:46:47.610" level="INFO">${list} = ('FAIL', "ValueError: Element locator 'xpath=//*[contains(@text,'Gel')]' did not match any elements.")</msg>
-<status status="PASS" starttime="20201104 13:46:47.200" endtime="20201104 13:46:47.610"></status>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
-<arguments>
-<arg>'${list}[0]'=='PASS'</arg>
-</arguments>
-<status status="PASS" starttime="20201104 13:46:47.610" endtime="20201104 13:46:47.611"></status>
-</kw>
-<kw name="Swipe By Percent" library="AppiumLibrary">
-<doc>Swipe from one percent of the screen to another percent, for an optional duration.
-Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
-<arguments>
-<arg>50</arg>
-<arg>60</arg>
-<arg>50</arg>
-<arg>25</arg>
-<arg>3000</arg>
-</arguments>
-<status status="PASS" starttime="20201104 13:46:47.611" endtime="20201104 13:46:50.065"></status>
-</kw>
-<status status="PASS" starttime="20201104 13:46:47.200" endtime="20201104 13:46:50.065"></status>
-</kw>
-<kw name="${i} = 4" type="foritem">
-<kw name="Run Keyword And Ignore Error" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<arguments>
-<arg>Get Webelements</arg>
-<arg>xpath=//*[contains(@text,'Gel')]</arg>
-</arguments>
-<assign>
-<var>${list}</var>
-</assign>
-<kw name="Get Webelements" library="AppiumLibrary">
-<doc>Returns list of [http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.remote.webelement|WebElement] objects matching ``locator``.</doc>
-<arguments>
-<arg>xpath=//*[contains(@text,'Gel')]</arg>
-</arguments>
-<status status="PASS" starttime="20201104 13:46:50.066" endtime="20201104 13:46:50.141"></status>
-</kw>
-<msg timestamp="20201104 13:46:50.141" level="INFO">${list} = ('PASS', [&lt;appium.webdriver.webelement.WebElement (session="0c4d40b6-9df4-4d56-8c1f-583437885130", element="3f4ac228-f232-4654-88e4-f169e2bc5098")&gt;, &lt;appium.webdriver.webelement.WebElement (session="0...</msg>
-<status status="PASS" starttime="20201104 13:46:50.065" endtime="20201104 13:46:50.141"></status>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
-<arguments>
-<arg>'${list}[0]'=='PASS'</arg>
-</arguments>
-<msg timestamp="20201104 13:46:50.141" level="INFO">Exiting for loop altogether.</msg>
-<status status="PASS" starttime="20201104 13:46:50.141" endtime="20201104 13:46:50.142"></status>
-</kw>
-<status status="PASS" starttime="20201104 13:46:50.065" endtime="20201104 13:46:50.142"></status>
-</kw>
-<status status="PASS" starttime="20201104 13:46:37.322" endtime="20201104 13:46:50.142"></status>
-</kw>
-<kw name="Swipe By Percent" library="AppiumLibrary">
-<doc>Swipe from one percent of the screen to another percent, for an optional duration.
-Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
-<arguments>
-<arg>50</arg>
-<arg>60</arg>
-<arg>50</arg>
-<arg>25</arg>
-<arg>3000</arg>
-</arguments>
-<status status="PASS" starttime="20201104 13:46:50.142" endtime="20201104 13:46:52.436"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//*[contains(@text,'Gel')]</arg>
-</arguments>
-<msg timestamp="20201104 13:46:52.439" level="INFO">Clicking element 'xpath=//*[contains(@text,'Gel')]'.</msg>
-<status status="PASS" starttime="20201104 13:46:52.437" endtime="20201104 13:46:52.564"></status>
-</kw>
-<status status="PASS" starttime="20201104 13:46:37.321" endtime="20201104 13:46:52.564"></status>
-</kw>
-<kw name="Add to Cart" library="1MGResources">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>//*[@text='Add To Cart']</arg>
-</arguments>
-<status status="PASS" starttime="20201104 13:46:52.564" endtime="20201104 13:46:55.512"></status>
+<status status="PASS" starttime="20201104 16:06:36.830" endtime="20201104 16:06:36.919"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>//*[@text='Add To Cart']</arg>
 </arguments>
-<msg timestamp="20201104 13:46:55.513" level="INFO">Clicking element '//*[@text='Add To Cart']'.</msg>
-<status status="PASS" starttime="20201104 13:46:55.512" endtime="20201104 13:46:55.630"></status>
+<msg timestamp="20201104 16:06:36.920" level="INFO">Clicking element '//*[@text='Add To Cart']'.</msg>
+<status status="PASS" starttime="20201104 16:06:36.919" endtime="20201104 16:06:37.023"></status>
 </kw>
-<status status="PASS" starttime="20201104 13:46:52.564" endtime="20201104 13:46:55.630"></status>
+<status status="PASS" starttime="20201104 16:06:36.830" endtime="20201104 16:06:37.024"></status>
 </kw>
-<status status="PASS" starttime="20201104 13:46:32.049" endtime="20201104 13:46:55.631"></status>
-</kw>
-<kw name="Enter Cart" library="1MGResources">
+<kw name="And I go to Cart">
 <kw name="Wait Until Page Contains Element" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` appears on current page.</doc>
 <arguments>
 <arg>//*[@text='You may also like']</arg>
 </arguments>
-<status status="PASS" starttime="20201104 13:46:55.631" endtime="20201104 13:47:01.374"></status>
+<status status="PASS" starttime="20201104 16:06:37.024" endtime="20201104 16:06:41.504"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>//*[@resource-id="com.aranoah.healthkart.plus:id/additional_offer"]</arg>
+<arg>//*[@resource-id="com.aranoah.healthkart.plus:id/cart_action"]</arg>
 </arguments>
-<msg timestamp="20201104 13:47:01.375" level="INFO">Clicking element '//*[@resource-id="com.aranoah.healthkart.plus:id/additional_offer"]'.</msg>
-<status status="PASS" starttime="20201104 13:47:01.374" endtime="20201104 13:47:01.514"></status>
+<msg timestamp="20201104 16:06:41.505" level="INFO">Clicking element '//*[@resource-id="com.aranoah.healthkart.plus:id/cart_action"]'.</msg>
+<status status="PASS" starttime="20201104 16:06:41.504" endtime="20201104 16:06:41.642"></status>
 </kw>
-<status status="PASS" starttime="20201104 13:46:55.631" endtime="20201104 13:47:01.515"></status>
+<status status="PASS" starttime="20201104 16:06:37.024" endtime="20201104 16:06:41.642"></status>
 </kw>
-<kw name="Cancel membership option" library="1MGResources">
+<kw name="and I Cancel the membership option">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>//*[@resource-id='com.aranoah.healthkart.plus:id/img_cross']</arg>
 </arguments>
-<status status="PASS" starttime="20201104 13:47:01.515" endtime="20201104 13:47:03.873"></status>
+<status status="PASS" starttime="20201104 16:06:41.643" endtime="20201104 16:06:43.717"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>//*[@resource-id='com.aranoah.healthkart.plus:id/img_cross']</arg>
 </arguments>
-<msg timestamp="20201104 13:47:03.874" level="INFO">Clicking element '//*[@resource-id='com.aranoah.healthkart.plus:id/img_cross']'.</msg>
-<status status="PASS" starttime="20201104 13:47:03.873" endtime="20201104 13:47:03.954"></status>
+<msg timestamp="20201104 16:06:43.718" level="INFO">Clicking element '//*[@resource-id='com.aranoah.healthkart.plus:id/img_cross']'.</msg>
+<status status="PASS" starttime="20201104 16:06:43.717" endtime="20201104 16:06:43.788"></status>
 </kw>
-<status status="PASS" starttime="20201104 13:47:01.515" endtime="20201104 13:47:03.954"></status>
+<status status="PASS" starttime="20201104 16:06:41.643" endtime="20201104 16:06:43.788"></status>
 </kw>
-<kw name="Validate odomos" library="1MGResources">
+<kw name="Then I should get savlon antiseptic liquid in cart">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>xpath=//*[@resource-id='com.aranoah.healthkart.plus:id/name']</arg>
 </arguments>
-<status status="PASS" starttime="20201104 13:47:03.955" endtime="20201104 13:47:04.522"></status>
+<status status="PASS" starttime="20201104 16:06:43.789" endtime="20201104 16:06:44.316"></status>
 </kw>
 <kw name="Get Text" library="AppiumLibrary">
 <doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
 <arguments>
-<arg>xpath=(//*[@resource-id='com.aranoah.healthkart.plus:id/name'])[1]</arg>
+<arg>xpath=//*[@resource-id='com.aranoah.healthkart.plus:id/name']</arg>
 </arguments>
 <assign>
 <var>${g}</var>
 </assign>
-<msg timestamp="20201104 13:47:04.589" level="INFO">Element 'xpath=(//*[@resource-id='com.aranoah.healthkart.plus:id/name'])[1]' text is 'Odomos Naturals Mosquito Repellent Gel' </msg>
-<msg timestamp="20201104 13:47:04.589" level="INFO">${g} = Odomos Naturals Mosquito Repellent Gel</msg>
-<status status="PASS" starttime="20201104 13:47:04.522" endtime="20201104 13:47:04.590"></status>
+<msg timestamp="20201104 16:06:44.402" level="INFO">Element 'xpath=//*[@resource-id='com.aranoah.healthkart.plus:id/name']' text is 'Savlon Antiseptic Liquid' </msg>
+<msg timestamp="20201104 16:06:44.402" level="INFO">${g} = Savlon Antiseptic Liquid</msg>
+<status status="PASS" starttime="20201104 16:06:44.316" endtime="20201104 16:06:44.402"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${g}</arg>
 </arguments>
-<status status="PASS" starttime="20201104 13:47:04.590" endtime="20201104 13:47:04.590"></status>
+<status status="PASS" starttime="20201104 16:06:44.402" endtime="20201104 16:06:44.402"></status>
 </kw>
 <kw name="Element Text Should Be" library="AppiumLibrary">
 <doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
 <arguments>
-<arg>xpath=(//*[@resource-id='com.aranoah.healthkart.plus:id/name'])[1]</arg>
-<arg>Odomos Naturals Mosquito Repellent Gel</arg>
-</arguments>
-<msg timestamp="20201104 13:47:04.591" level="INFO">Verifying element 'xpath=(//*[@resource-id='com.aranoah.healthkart.plus:id/name'])[1]' contains exactly text 'Odomos Naturals Mosquito Repellent Gel'.</msg>
-<status status="PASS" starttime="20201104 13:47:04.590" endtime="20201104 13:47:04.660"></status>
-</kw>
-<status status="PASS" starttime="20201104 13:47:03.955" endtime="20201104 13:47:04.660"></status>
-</kw>
-<kw name="validate Savlon" library="1MGResources">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=(//*[@resource-id='com.aranoah.healthkart.plus:id/name'])[2]</arg>
-</arguments>
-<status status="PASS" starttime="20201104 13:47:04.661" endtime="20201104 13:47:04.727"></status>
-</kw>
-<kw name="Get Text" library="AppiumLibrary">
-<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
-<arguments>
-<arg>xpath=(//*[@resource-id='com.aranoah.healthkart.plus:id/name'])[2]</arg>
-</arguments>
-<assign>
-<var>${g}</var>
-</assign>
-<msg timestamp="20201104 13:47:04.797" level="INFO">Element 'xpath=(//*[@resource-id='com.aranoah.healthkart.plus:id/name'])[2]' text is 'Savlon Antiseptic Liquid' </msg>
-<msg timestamp="20201104 13:47:04.798" level="INFO">${g} = Savlon Antiseptic Liquid</msg>
-<status status="PASS" starttime="20201104 13:47:04.727" endtime="20201104 13:47:04.798"></status>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>${g}</arg>
-</arguments>
-<status status="PASS" starttime="20201104 13:47:04.798" endtime="20201104 13:47:04.798"></status>
-</kw>
-<kw name="Element Text Should Be" library="AppiumLibrary">
-<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
-<arguments>
-<arg>xpath=(//*[@resource-id='com.aranoah.healthkart.plus:id/name'])[2]</arg>
+<arg>xpath=//*[@resource-id='com.aranoah.healthkart.plus:id/name']</arg>
 <arg>Savlon Antiseptic Liquid</arg>
 </arguments>
-<msg timestamp="20201104 13:47:04.799" level="INFO">Verifying element 'xpath=(//*[@resource-id='com.aranoah.healthkart.plus:id/name'])[2]' contains exactly text 'Savlon Antiseptic Liquid'.</msg>
-<status status="PASS" starttime="20201104 13:47:04.799" endtime="20201104 13:47:04.858"></status>
+<msg timestamp="20201104 16:06:44.403" level="INFO">Verifying element 'xpath=//*[@resource-id='com.aranoah.healthkart.plus:id/name']' contains exactly text 'Savlon Antiseptic Liquid'.</msg>
+<status status="PASS" starttime="20201104 16:06:44.403" endtime="20201104 16:06:44.481"></status>
 </kw>
-<status status="PASS" starttime="20201104 13:47:04.660" endtime="20201104 13:47:04.858"></status>
+<status status="PASS" starttime="20201104 16:06:43.789" endtime="20201104 16:06:44.481"></status>
 </kw>
-<kw name="Validate savlon quantity" library="1MGResources">
-<kw name="Element Should Contain Text" library="AppiumLibrary">
-<doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
-<arguments>
-<arg>xpath=(//*[@resource-id='com.aranoah.healthkart.plus:id/stepper_value'])[2]</arg>
-<arg>2</arg>
-</arguments>
-<msg timestamp="20201104 13:47:04.859" level="INFO">Verifying element 'xpath=(//*[@resource-id='com.aranoah.healthkart.plus:id/stepper_value'])[2]' contains text '2'.</msg>
-<status status="PASS" starttime="20201104 13:47:04.858" endtime="20201104 13:47:04.920"></status>
-</kw>
-<status status="PASS" starttime="20201104 13:47:04.858" endtime="20201104 13:47:04.921"></status>
-</kw>
-<status status="PASS" starttime="20201104 13:45:49.098" endtime="20201104 13:47:04.921" critical="yes"></status>
+<status status="PASS" starttime="20201104 16:05:57.941" endtime="20201104 16:06:44.482" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20201104 13:45:48.890" endtime="20201104 13:47:04.921"></status>
+<status status="PASS" starttime="20201104 16:05:57.774" endtime="20201104 16:06:44.482"></status>
 </suite>
-<status status="PASS" starttime="20201104 13:45:48.888" endtime="20201104 13:47:04.923"></status>
+<status status="PASS" starttime="20201104 16:05:57.772" endtime="20201104 16:06:44.484"></status>
 </suite>
-<status status="PASS" starttime="20201104 13:45:48.870" endtime="20201104 13:47:04.924"></status>
+<status status="PASS" starttime="20201104 16:05:57.753" endtime="20201104 16:06:44.485"></status>
 </suite>
 <statistics>
 <total>
@@ -738,8 +346,8 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 </tag>
 <suite>
 <stat pass="1" fail="0" id="s1" name="1MGAutomation">1MGAutomation</stat>
-<stat pass="1" fail="0" id="s1-s1" name="1MGSuite">1MGAutomation.1MGSuite</stat>
-<stat pass="1" fail="0" id="s1-s1-s1" name="1MGTestSuite">1MGAutomation.1MGSuite.1MGTestSuite</stat>
+<stat pass="1" fail="0" id="s1-s1" name="Gherkins">1MGAutomation.Gherkins</stat>
+<stat pass="1" fail="0" id="s1-s1-s1" name="Gherkins">1MGAutomation.Gherkins.Gherkins</stat>
 </suite>
 </statistics>
 <errors>
