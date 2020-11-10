@@ -1,4 +1,7 @@
 # 2009MYSEMB02-RF-1MG
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/aaf7f97426814c7f9251a18ab19f1b17)](https://app.codacy.com/gh/99002464/2009MYSEMB02-RF-1MG?utm_source=github.com&utm_medium=referral&utm_content=99002464/2009MYSEMB02-RF-1MG&utm_campaign=Badge_Grade)
+
 Native App Mini Project
 
         Application Name     : 1MG Healthcare App
